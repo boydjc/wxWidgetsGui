@@ -16,14 +16,19 @@ class MainFrame: public wxFrame {
         MainFrame(const wxString &title, const wxPoint &pos,
             const wxSize &size);
             wxButton *HelloWorld;
+            wxTextCtrl *textCtrl;
             void OnExit(wxCommandEvent& event);
+            /* challenge code */
+            void displayMessage(wxCommandEvent& event);
 
             DECLARE_EVENT_TABLE()
 };
 
 enum {
-    // declates an id which will be used to call our button
-    BUTTON_Hello = wxID_HIGHEST + 1 
+    // declares an id which will be used to call our button
+    BUTTON_Hello = wxID_HIGHEST + 1,
+    /* challenge code */
+    TextCtrl_Hello = wxID_HIGHEST + 2
 };
 
 DECLARE_APP(MainApp)
